@@ -1,5 +1,5 @@
-@import './base';
 @import './variables';
+@import './base';
 @import './mixins';
 
 *,
@@ -137,7 +137,7 @@
   text-align: center;
 
   &__title {
-    @include title
+    @include title;
   }
 
   &__image {
@@ -176,19 +176,19 @@
 }
 
 .shoe-red {
-  --clr-inner: $color-yellow
-  --clr-outer: $color-dark-yellow
-  --clr-accent: $color-red
+  --clr-inner: $color-yellow;
+  --clr-outer: $color-dark-yellow;
+  --clr-accent: $color-red;
 }
 
 .shoe-white {
-  --clr-inner: $color-soft-yellow
-  --clr-outer: $color-medium-yellow
-  --clr-accent: $color-ocean
+  --clr-inner: $color-soft-yellow;
+  --clr-outer: $color-medium-yellow;
+  --clr-accent: $color-ocean;
 }
 
 .shoe-blue {
-  --clr-inner: $color-sky
-  --clr-outer: $color-blue-sky
-  --clr-accent: $color-green
+  --clr-inner: $color-sky;
+  --clr-outer: $color-blue-sky;
+  --clr-accent: $color-green;
 }
