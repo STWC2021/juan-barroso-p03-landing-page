@@ -130,7 +130,7 @@
 }
 
 .product {
-  background: radial-gradient(var(--clr-inner, limegreen), var(--clr-outer, purple));
+  background: #fff;
   padding: 3em;
   border-radius: 1em;
   margin-bottom: 5em;
@@ -172,23 +172,20 @@
 }
 
 .hero {
-  --clr-accent: $color-yellow;
+  --clr-accent:  #faa700;
 }
 
 .shoe-red {
-  --clr-inner: $color-yellow;
-  --clr-outer: $color-dark-yellow;
-  --clr-accent: $color-red;
+  background: radial-gradient($--color-yellow, $--color-dark-yellow);
+  --clr-accent:  #a1173c;
 }
 
 .shoe-white {
-  --clr-inner: $color-soft-yellow;
-  --clr-outer: $color-medium-yellow;
-  --clr-accent: $color-ocean;
+  background: radial-gradient($--color-soft-yellow, $--color-medium-yellow);
+  --clr-accent:  #2f4858;
 }
 
 .shoe-blue {
-  --clr-inner: $color-sky;
-  --clr-outer: $color-blue-sky;
-  --clr-accent: $color-green;
+  background: radial-gradient($--color-sky, $--color-blue-sky);
+  --clr-accent:  #008951;
 }
