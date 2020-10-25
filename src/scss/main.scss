@@ -1,29 +1,11 @@
+@import './base';
+@import './variables';
+@import './mixins';
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: 'Noto Sans JP', sans-serif;
-  line-height: 1.6;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-h1,
-h2,
-h3,
-p {
-  margin: 0;
-}
-
-section {
-  padding: 7em 0;
 }
 
 .container {
@@ -113,15 +95,13 @@ section {
     text-align: center;
     line-height: 1.2;
 
-
-
     &:hover,
     &:focus {
       transform: scale(1);
 
       .featured__details {
         opacity: 1;
-        text-shadow: 0 0 2em rgba(#fff, 1)
+        text-shadow: 0 0 .2em rgba(#fff, 1)
       }
     }
 
@@ -157,11 +137,7 @@ section {
   text-align: center;
 
   &__title {
-    font-size: clamp(3rem, calc(5vw + 1rem), 5.5rem);
-    text-transform: uppercase;
-    line-height: 1;
-    color: #fff;
-    text-shadow: 0 0 .2em rgba(#000, .2);
+    @include title
   }
 
   &__image {
@@ -179,7 +155,6 @@ section {
     &__image {
       float: right;
       width: 65%;
-      // outline: 2px solid red;
       shape-outside: url(../img/shoe-1.png);
       shape-margin: 1em;
       margin: 0 -5em 0 0;
@@ -197,23 +172,23 @@ section {
 }
 
 .hero {
-  --clr-accent: #faa700;
+  --clr-accent: $color-yellow;
 }
 
 .shoe-red {
-  --clr-inner: #faa700;
-  --clr-outer: #e48d00;
-  --clr-accent: #a1173c;
+  --clr-inner: $color-yellow
+  --clr-outer: $color-dark-yellow
+  --clr-accent: $color-red
 }
 
 .shoe-white {
-  --clr-inner: #fce4b3;
-  --clr-outer: #eac886;
-  --clr-accent: #2f4858;
+  --clr-inner: $color-soft-yellow
+  --clr-outer: $color-medium-yellow
+  --clr-accent: $color-ocean
 }
 
 .shoe-blue {
-  --clr-inner: #6dd5ed;
-  --clr-outer: #2193b0;
-  --clr-accent: #008951;
+  --clr-inner: $color-sky
+  --clr-outer: $color-blue-sky
+  --clr-accent: $color-green
 }
