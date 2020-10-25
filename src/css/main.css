@@ -6,7 +6,7 @@
 
 body {
   margin: 0;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   line-height: 1.6;
 }
 
@@ -54,12 +54,11 @@ section {
   color: var(--clr-text, #fff);
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 1.125em;
+  font-size: 1.125rem;
   padding: .5em 1.25em;
   background: var(--clr-accent, blue);
   border-radius: .25em;
-  transition: transform 250ms ease-in-out;
-  opacity: 250ms linear;
+  transition: transform 250ms ease-in-out, opacity 250ms linear;
 }
 
 .btn:hover,
@@ -115,12 +114,6 @@ section {
   line-height: 1.2;
 }
 
-.featured__item span {
-  display: block;
-  font-weight: 700;
-  font-size: 2.5em;
-}
-
 .featured__item:hover, .featured__item:focus {
   transform: scale(1);
 }
@@ -136,7 +129,6 @@ section {
   top: 10%;
   left: 10%;
   padding: 75% 75% 0 0;
-  background: red;
   border-radius: 50%;
   background: #2193b0;
   z-index: -1;
@@ -150,22 +142,23 @@ section {
 .featured__details span {
   display: block;
   font-weight: 700;
-  font-size: 2.5em;
+  font-size: 2.5rem;
 }
 
 .product {
   background: radial-gradient(var(--clr-inner, limegreen), var(--clr-outer, purple));
   padding: 3em;
   border-radius: 1em;
-  margin-bottom: 3em;
+  margin-bottom: 5em;
   text-align: center;
 }
 
 .product__title {
-  font-size: 4rem;
-  line-height: 1.1;
+  font-size: clamp(3rem, calc(5vw + 1rem), 5.5rem);
+  text-transform: uppercase;
+  line-height: 1;
   color: #fff;
-  text-shadow: 0 0 0.2em black;
+  text-shadow: 0 0 0.2em rgba(0, 0, 0, 0.2);
 }
 
 .product__image {
@@ -175,11 +168,23 @@ section {
 @media (min-width: 45em) {
   .product {
     text-align: left;
+    margin-bottom: 9em;
+  }
+  .product__title {
+    margin: 0;
   }
   .product__image {
     float: right;
     width: 65%;
     shape-outside: url(../img/shoe-1.png);
+    shape-margin: 1em;
+    margin: 0 -5em 0 0;
+  }
+  .product.shoe-left .product__image {
+    float: left;
+    shape-outside: url(../img/shoe-2.png);
+    margin: 0 0 0 -5em;
+    shape-margin: 2em;
   }
 }
 
